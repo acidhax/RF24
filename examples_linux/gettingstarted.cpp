@@ -46,7 +46,7 @@ using namespace std;
 //RF24 radio(RPI_V2_GPIO_P1_15, RPI_V2_GPIO_P1_24, BCM2835_SPI_SPEED_8MHZ);
 
 // RPi generic:
-RF24 radio(22,0);
+RF24 radio(edison::Gp44,1);
 
 /*** RPi Alternate ***/
 //Note: Specify SPI BUS 0 or 1 instead of CS pin number.
@@ -75,7 +75,7 @@ RF24 radio(22,0);
 
 /********** User Config *********/
 // Assign a unique identifier for this node, 0 or 1
-bool radioNumber = 1;
+bool radioNumber = 0;
 
 /********************************/
 
@@ -89,6 +89,7 @@ int main(int argc, char** argv){
   bool role = role_pong_back;
 
   cout << "RF24/examples/GettingStarted/\n";
+  cout << edison::Gp44;
 
   // Setup and configure rf radio
   radio.begin();
