@@ -31,8 +31,8 @@ int main(int argc, char** argv){
 	radio.openWritingPipe(pipes[radioNumber]);
 
 	for (int i = 0; i < 6; i++) {
-		cout << radioNumber << "\n";
 		if (i != radioNumber) {
+			cout << i << "\n";
     		radio.openReadingPipe(i,pipes[i]);
 		}
 	}
