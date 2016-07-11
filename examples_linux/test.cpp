@@ -26,7 +26,7 @@ int main(int argc, char** argv){
 
 	int radioNumber = (int)input[0];
 
-	count << "input" << input << "\n";
+	cout << "input" << input << "\n";
 
 	radio.openWritingPipe(pipes[radioNumber]);
 
