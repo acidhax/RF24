@@ -24,8 +24,7 @@ int main(int argc, char** argv){
 	cout << "Choose your node number. #0-6 \n>";
 	getline(cin,input);
 
-	uint8_t radioNumber = (uint8_t)input[0];
-	cout << input[0];
+	int radioNumber = (int)input[0];
 
 	radio.openWritingPipe(pipes[radioNumber]);
 
