@@ -30,7 +30,7 @@ int main(int argc, char** argv){
 
 	for (uint8_t i = 0; i < 6; i++) {
 		if (i != radioNumber) {
-			cout << i << " \n";
+			cout << (string)i << "... \n";
     		radio.openReadingPipe(i,pipes[i]);
 		}
 	}
