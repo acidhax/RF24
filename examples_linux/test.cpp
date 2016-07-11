@@ -24,7 +24,7 @@ int main(int argc, char** argv){
 	cout << "Choose your node number. #0-6 \n>";
 	getline(cin,input);
 
-	int radioNumber = (int)input[0];
+	int radioNumber = (int)input[0]-48;
 
 	cout << "input" << input << "\n";
 
