@@ -155,7 +155,7 @@ int main(int argc, char** argv){
 			unsigned long started_waiting_at = millis();
 			bool timeout = false;
 			while ( ! radio.available() && ! timeout ) {
-				if (millis() - started_waiting_at > 200 )
+				if (millis() - started_waiting_at > 2000 )
 					timeout = true;
 			}
 
