@@ -29,11 +29,8 @@ int main(int argc, char** argv){
 	radio.openWritingPipe(pipes[radioNumber]);
 
 	for (int i = 0; i < 6; i++) {
-		cout << (int)i << (int)radioNumber;
+		cout << (int)i << "\n" << (int)radioNumber << "\n";
 		if (i != radioNumber) {
-			std::ostringstream oss;
-			oss << "..." << (int)i;
-			std::cout << oss.str();
     		radio.openReadingPipe(i,pipes[i]);
 		}
 	}
