@@ -31,7 +31,7 @@ int main(int argc, char** argv){
 	for (uint8_t i = 0; i < 6; i++) {
 		if (i != radioNumber) {
 			std::ostringstream oss;
-			oss << "..." << i;
+			oss << "..." << (int)i;
 			std::cout << oss.str();
     		radio.openReadingPipe(i,pipes[i]);
 		}
