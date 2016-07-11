@@ -21,7 +21,7 @@ int main(int argc, char** argv){
 	// Dump the configuration of the rf unit for debugging
 	radio.printDetails();
 	string input = "";
-	cout << "Choose a role: Enter 0 for pong_back, 1 for ping_out (CTRL+C to exit) \n>";
+	cout << "Choose your node number. #0-6 \n>";
 	getline(cin,input);
 
 	uint8_t radioNumber = (uint8_t)input[0];
@@ -30,6 +30,7 @@ int main(int argc, char** argv){
 
 	for (uint8_t i = 0; i < 6; i++) {
 		if (i != radioNumber) {
+			cout << i << " \n";
     		radio.openReadingPipe(i,pipes[i]);
 		}
 	}
